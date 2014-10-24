@@ -1,21 +1,26 @@
-App.controller 'AlchemyPagesController', ['$scope', '$http', '$routeParams', ($scope, $http, $routeParams) ->
+App.controller('AlchemyPagesController',
+  ['$rootScope', '$scope', '$http', '$routeParams',
+    ($rootScope, $scope, $http, $routeParams) ->
+      $scope.loadPage = (url) ->
+        $http.get(url).success (response) ->
+          $rootScope.title = response.title
+          $rootScope.metaKeywords = response.meta_keywords
+          $rootScope.metaDescription = response.meta_description
+          $scope.elements = response.elements
+          $scope.cells = response.cells
+          $scope.pageLayout = response.page_layout
+          return
+        return
 
-  $scope.loadPage = (url) ->
-    $http.get(url).success (response) ->
-      $scope.elements = response.elements
-      $scope.cells = response.cells
-      $scope.page_layout = response.page_layout
+      # To make this work in Alchemy preview frame
+      if $routeParams.id
+        url = "/api/admin/pages/#{$routeParams.id}.json"
+      else if $routeParams.page
+        url = "/api/pages/#{$routeParams.page}.json"
+      else
+        return
+
+      $scope.loadPage(url)
       return
-    return
-
-  # To make this work in Alchemy preview frame
-  if $routeParams.id
-    url = "/api/admin/pages/#{$routeParams.id}.json"
-  else if $routeParams.page
-    url = "/api/pages/#{$routeParams.page}.json"
-  else
-    return
-
-  $scope.loadPage(url)
-  return
-]
+  ]
+)

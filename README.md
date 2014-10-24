@@ -94,7 +94,7 @@ Resources
 * Issue-Tracker: <https://github.com/magiclabs/alchemy-angular/issues>
 * Sourcecode: <https://github.com/magiclabs/alchemy-angular>
 * User Group: <http://groups.google.com/group/alchemy-cms>
-* IRC Channel: #alchemy_cms on irc.freenode.net
+* IRC Channel: [irc://irc.freenode.net#alchemy_cms](irc.freenode.net#alchemy_cms)
 * Discussion Board: <https://trello.com/alchemycms>
 
 Authors

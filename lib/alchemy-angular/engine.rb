@@ -1,5 +1,5 @@
-require 'alchemy-angular'
 require 'rails'
+require 'angular-rails-templates'
 
 module AlchemyAngular
   class Engine < Rails::Engine

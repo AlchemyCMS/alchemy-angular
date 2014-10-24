@@ -54,7 +54,7 @@ This gem has two directives `alchemyCell` and `alchemyElement`.
 In order to render an Alchemy element use this markup:
 
 ```html
-<alchemy:element>
+<alchemy-element></alchemy-element>
 ```
 
 The directive loads a template named after the element and placed inside your
@@ -71,10 +71,10 @@ The `$scope` inside the template has some handy methods for you:
 In order to render an Alchemy cell use this markup:
 
 ```html
-<alchemy:cell>
+<alchemy-cell></alchemy-cell>
 ```
 
-The `$scope` inside the template has some handy methods for you:
+The `$scope` inside the template has this attribute:
 
 * `elements` - The collection of all elements of current cell.
 

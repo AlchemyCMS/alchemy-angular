@@ -1,6 +1,6 @@
-# AngularJS integration for AlchemyCMS
+# AngularJS integration for Alchemy CMS
 
-Provides Rails generators and Angular controllers and directives for seamless integration of AlchemyCMS within your AngularJS powered one page frontend app.
+Provides Rails generators and Angular controllers and directives for seamless integration of "Alchemy CMS":http://alchemy-cms.com within your AngularJS powered one page frontend app.
 
 ## Installation
 
@@ -21,7 +21,7 @@ Generate you Angular templates for Alchemy elements, cells and pages:
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/alchemy-angular/fork )
+1. Fork it ( https://github.com/magiclabs/alchemy-angular/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

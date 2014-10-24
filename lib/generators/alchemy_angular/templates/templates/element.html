@@ -1,11 +1,11 @@
 <div class="<%= @element_name %>">
-<% @contents.each do |content| -%>
-  <% if content['essence_type'] == 'EssenceRichtext' %>
+<%- @contents.each do |content| -%>
+  <%- if content['essence_type'] == 'EssenceRichtext' -%>
   <div ng-bind-html="ingredient('<%= content['name'] %>')" class="<%= content['name'] %>"></div>
-  <% elsif content['essence_type'] == 'EssencePicture' %>
+  <%- elsif content['essence_type'] == 'EssencePicture' -%>
   <img ng-if="ingredient('<%= content['name'] %>') != ''" ng-src="{{ingredient('<%= content['name'] %>')}}">
-  <% else %>
+  <%- else -%>
   <div class="<%= content['name'] %>">{{ingredient('<%= content['name'] %>')}}</div>
-  <% end %>
-<% end %>
+  <%- end -%>
+<%- end -%>
 </div>

@@ -6,18 +6,44 @@ Provides Rails generators and Angular controllers and directives for seamless in
 
 Add this line to your application's Gemfile:
 
-    gem 'alchemy_cms', github: 'magiclabs/alchemy_cms', branch: 'feature/json-api-changes'
-    gem 'alchemy-angular', github: 'magiclabs/alchemy-angular'
+```ruby
+gem 'alchemy_cms', github: 'magiclabs/alchemy_cms', branch: 'feature/json-api-changes'
+gem 'alchemy-angular', github: 'magiclabs/alchemy-angular'
+```
 
 And then execute:
 
-    $ bundle install
+```shell
+$ bundle install
+```
 
 ## Usage
 
-Generate you Angular templates for Alchemy elements, cells and pages:
+### Require The Javascript Libraries
 
-    $ bin/rails g alchemy_angular:templates --skip
+This gem provides routes, controllers and directives that work perfectly with the Alchemy JSON API. To get them into your app, you need to require them in your `application.js` file.
+
+You can either require the whole package at once:
+
+```javascript
+//= require alchemy-angular
+```
+
+Or, if you only need specific parts you can require them seperatly:
+
+```javascript
+//= require alchemy-angular/controllers
+//= require alchemy-angular/directives
+//= require alchemy-angular/routes
+```
+
+### Generate Angular Templates
+
+This gem also provides Rails generators that generate Angular templates for your Alchemy elements, cells and pages:
+
+```shell
+$ bin/rails g alchemy_angular:templates --skip
+```
 
 ## Contributing
 

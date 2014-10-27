@@ -1,6 +1,6 @@
 # AngularJS integration for Alchemy CMS
 
-Provides Rails generators and Angular controllers and directives for seamless integration of [Alchemy CMS](http://alchemy-cms.com) within your AngularJS powered one page frontend app.
+Provides Rails generators and Angular controllers, services and directives for seamless integration of [Alchemy CMS](http://alchemy-cms.com) within your AngularJS powered one page frontend app.
 
 ## Installation
 
@@ -35,6 +35,7 @@ Or, if you only need specific parts you can require them seperatly:
 //= require alchemy-angular/controllers
 //= require alchemy-angular/directives
 //= require alchemy-angular/routes
+//= require alchemy-angular/services
 ```
 
 ### Generate Angular Templates

@@ -21,12 +21,13 @@ App.directive 'alchemyElement', ['$sce', ($sce) ->
 
       # Returns the ingredient value of given name
       scope.ingredient = (name) ->
-        ingredient = _.findWhere(scope.ingredients, {name: name})
-        ingredient.value if ingredient
+        _.findWhere(scope.ingredients, {name: name})
 
       # Checks if the ingredient with given name is not null or empty
       scope.ingredient_present = (name) ->
-        scope.ingredient(name) && scope.ingredient(name) != ''
+        ingredient = scope.ingredient(name)
+        return false unless ingredient
+        ingredient.value && ingredient.value != ''
 
       return
     template: '<div ng-include="elementTemplate"></div>'

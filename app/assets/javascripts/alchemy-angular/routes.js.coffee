@@ -11,4 +11,9 @@ App.config ['$routeProvider', '$locationProvider', ($routeProvider, $locationPro
     .when '/:page*',
       controller: 'AlchemyPagesController'
       templateUrl: 'alchemy/page.html'
+    # Route not found -> 404
+    .otherwise
+      templateUrl: '/404.html'
+
+  return
 ]

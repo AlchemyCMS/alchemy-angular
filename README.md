@@ -7,7 +7,7 @@ Provides Rails generators and Angular controllers, services and directives for s
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'alchemy_cms', github: 'magiclabs/alchemy_cms', branch: 'feature/json-api-changes'
+gem 'alchemy_cms', '3.1.0.beta1'
 gem 'alchemy-angular', github: 'magiclabs/alchemy-angular'
 ```
 
